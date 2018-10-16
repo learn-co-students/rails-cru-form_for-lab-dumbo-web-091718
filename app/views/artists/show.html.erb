@@ -1,0 +1,15 @@
+<h1> <%= @artist.name %></h1><br>
+
+<h3> Songs By  <%= @artist.name %></h3><br>
+<% @artist.songs.each do |song| %>
+  <%= link_to song.name, song_path(song) %><br>
+<% end %>
+
+<h3> Genres </h3>
+<% @gen_arr.each do |genre| %>
+  <%= link_to genre.name, genre_path(genre) %><br>
+<% end %>
+<br>
+<%= button_to "Edit This Artist", edit_artist_path, {method: "get"} %><br>
+<%= button_to "Remove This Artist", @artist, {method: "delete"} %><br>
+<%= button_to "View All Artists", artists_path, {method: "get"} %><br>

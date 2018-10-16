@@ -1,0 +1,8 @@
+<h1>All of Our Songs</h1>
+<% @songs.each do |song| %>
+  <%= link_to song.name, song_path(song) %><br>
+<% end %>
+<br>
+<%= button_to "Add A New Song", new_song_path, {method: "get"}%><br>
+<%= button_to "View All Genres", genres_path, {method: "get"} %><br>
+<%= button_to "View All Artists", artists_path, {method: "get"} %><br>
