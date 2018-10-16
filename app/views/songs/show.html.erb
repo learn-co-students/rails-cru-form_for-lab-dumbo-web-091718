@@ -1,0 +1,6 @@
+<h1><%= @song.name %></h1>
+<h3><%= link_to @artist.name, artist_path(@artist) %></h3><br>
+<h3><%= link_to @genre.name, genre_path(@genre) %></h3><br>
+<%= button_to "Edit This Song", edit_song_path, method: "get" %><br>
+<%= button_to "Delete This Song", @song, method: "delete" %><br>
+<%= button_to "View All Songs", songs_path, method: "get" %>

@@ -1,0 +1,9 @@
+<h1>Artists</h1>
+<% @artists.each do |artist| %>
+  <%= link_to artist.name, artist_path(artist) %><br>
+<% end %><br>
+
+<%= button_to "Add A New Artist", new_artist_path, {method: "get"} %><br>
+<br>
+<%= button_to "View All Songs", songs_path, {method: "get"} %><br>
+<%= button_to "View All Genres", genres_path, {method: "get"} %><br>
